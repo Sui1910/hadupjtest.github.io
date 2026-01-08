@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elysia - Herrscher of Human: Ego</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="basic-info">
+        <div class="bg-pattern"></div>
+        <div class="header-title">
+            <span class="deco-star">✦</span>
+            Thông tin cơ bản <span class="sub">/ Elysia - Herrscher of Human: Ego</span>
+        </div>
+
+        <div class="info-layout reveal">
+            <div class="center-portrait">
+                <img src="ely3.webp" alt="Portrait Placeholder">
+            </div>
+
+            <div class="info-pill p-left-1">
+                <span class="pill-label">Thuộc tính</span>
+                <img src="ely4.png" class="pill-icon-img" alt="Icon">
+                <span class="pill-val">异能</span>
+            </div>
+
+            <div class="info-pill p-left-2">
+                <span class="pill-label">武器</span>
+                <img src="ely5.png" class="pill-icon-img" alt="Icon">
+                <span class="pill-val">弓箭</span>
+            </div>
+
+            <div class="info-pill p-right-1">
+                <span class="pill-label">Sát thương</span>
+                <img src="ely6.jpg" class="pill-icon-img" alt="Icon">
+                <span class="pill-val">冰伤</span>
+            </div>
+
+            <div class="info-pill p-right-2">
+                <span class="pill-label">Sinh nhật</span>
+                <img src="ely7.webp" class="pill-icon-img" alt="Icon">
+                <span class="pill-val">11/11</span>
+            </div>
+
+            <div class="desc-box">
+                Hình dạng「Chân Ngã · Luật Giả Nhân Chi」là bộ giáp Luật Giả cấp S hoàn toàn mới của Elysia. Nhân vật sử dụng cung tên và quyền trượng để tấn công kẻ địch. 
+                <br>Sau khi kích hoạt tất sát kỹ,「Chân Ngã · Luật Giả Nhân Chi」sẽ tạo ra「Tinh Hải Vãng Thế」, thay đổi bối cảnh chiến đấu và chuyển sang dùng quyền trượng để tấn công kẻ địch.
+            </div>
+        </div>
+    </section>
+<section id="weapon">
+    <div class="bg-pattern"></div>
+    <div class="header-title">
+        <span class="deco-star">✦</span>
+        Đề Cử Vũ Khí <span class="sub">/ WEAPON</span>
+    </div>
+
+    <div class="weapon-container reveal" >
+        <div class="weapon-card float">
+            <img src="ely2.png" alt="Key of Ego" class="weapon-img" data-tilt data-tilt-max="15" data-tilt-scale="1.05">
+            <div class="weapon-name">Chân Ngã Chi Dược</div>
+            <div class="stars">★★★★★</div>
+        </div>
+
+        <div class="weapon-card float">
+            <div class="pri-arm-badge">
+                <span>Siêu Hạn</span>
+                <span>Vũ Khí</span>
+            </div>
+            <img src="ely1.jpg" alt="Domain of Ego" class="weapon-img" data-tilt data-tilt-max="15" data-tilt-scale="1.05">
+            <div class="weapon-name">Chân Ngã Chi Cảnh：Vô Hà Hồi Quy</div>
+            <div class="stars">★★★★★★</div>
+        </div>
+    </div>
+    <div class="weapon-desc reveal">
+    <b>Chân Ngã Chi Thược</b> nãi nhất kiện cực kỳ cường đại chi cung tiễn, 
+    chuyên vi <b>Nhân Chi Luật Giả · Chân Ngã</b> sở thiết.
+    <br>
+    Vũ khí năng cường hóa băng thương, đề thăng tất sát kỹ hiệu quả,
+    đồng thời gia tăng uy lực khi thi triển quyền trượng hình thái.
+</div>
+
+</section>
+
+
+   <section id="stigmata">
+    <div class="bg-pattern"></div>
+    <div class="header-title">
+        <span class="deco-star">✦</span>
+        Vết Thánh —「Thủy Nguyên Chi Hoa」<span class="sub">/ STIGMATA</span>
+    </div>
+
+    <div class="stigmata-container reveal" >
+        <div class="stig-card float">
+            <img src="ely8.webp" class="stig-img" alt="Top">
+            <div class="stig-name" >Elysia · Vô Hạ Chi Nhân (Thượng)</div>
+        </div>
+        <div class="stig-card float">
+            <img src="ely9.webp" class="stig-img" alt="Mid">
+            <div class="stig-name">Elysia · Vô Hạ Chi Nhân (Trung)</div>
+        </div>
+        <div class="stig-card float">
+            <img src="ely10.webp" class="stig-img" alt="Bot">
+            <div class="stig-name">Elysia · Vô Hạ Chi Nhân (Hạ)</div>
+        </div>
+    </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+<script>
+const reveals = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        } else {
+            entry.target.classList.remove('active');
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

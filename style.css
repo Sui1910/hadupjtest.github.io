@@ -1,0 +1,332 @@
+ /* --- GLOBAL STYLES --- */
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Noto+Sans+SC:wght@400;700;900&display=swap');
+
+        :root {
+            --primary-purple: #9d86e1;
+            --dark-purple: #7a65c5;
+            --deep-bg: #8972d3;
+            --accent-gold: #ffe58f;
+            --text-white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', 'Microsoft YaHei', 'Nunito', sans-serif;
+            background-color: var(--deep-bg);
+            color: var(--text-white);
+            overflow-x: hidden;
+        }
+
+        /* --- BACKGROUND PATTERN --- */
+        .bg-pattern {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* --- SECTIONS --- */
+        section {
+            position: relative;
+            width: 100%;
+            min-height: 100vh; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+        }
+
+        /* --- HEADERS --- */
+        .header-title {
+            display: flex;
+            align-items: center;
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--text-white);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            margin-bottom: 40px;
+            background: rgba(106, 76, 172, 0.8);
+            padding: 10px 30px;
+            border-radius: 50px;
+            border: 2px solid white;
+        }
+        
+        .header-title span.sub {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.7);
+            margin-left: 15px;
+            font-weight: 400;
+            font-family: 'Nunito', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .deco-star {
+            color: var(--accent-gold);
+            margin-right: 15px;
+            font-size: 1.5rem;
+        }
+
+        /* --- SECTION 1: BASIC INFO (Image 2) --- */
+        .info-layout {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            height: 550px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -50px;
+        }
+
+        .center-portrait {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 8px solid rgba(255,255,255,0.9);
+            box-shadow: 0 0 40px rgba(255, 192, 203, 0.5);
+            overflow: hidden;
+            z-index: 2;
+            background: #fff;
+            position: relative;
+        }
+        
+        .center-portrait img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .info-pill {
+            position: absolute;
+            background: white;
+            color: var(--deep-bg);
+            padding: 15px 5px;
+            border-radius: 50px;
+            width: 70px;
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border: 3px solid #e1d3f5;
+            z-index: 1;
+        }
+        
+        .pill-label { 
+            font-size: 1rem; 
+            writing-mode: vertical-rl; 
+            letter-spacing: 2px; 
+            margin-top: 5px;
+            color: #888;
+        }
+        
+        .pill-val { 
+            font-size: 1.1rem; 
+            writing-mode: vertical-rl; 
+            font-weight: 900; 
+            color: #d664be; 
+            margin-bottom: 5px;
+        }
+        
+        .pill-icon-img {
+            width: 35px; 
+            height: 35px;
+            object-fit: contain;
+            background: #eee; 
+            border-radius: 50%;
+        }
+        .p-left-1 { left: 40px; top: 30px; }
+        .p-left-2 { left: 140px; top: 80px; }
+        .p-right-1 { right: 140px; top: 80px; }
+        .p-right-2 { right: 40px; top: 30px; }
+
+        .desc-box {
+            position: absolute;
+            bottom: -60px;
+            background: rgba(105, 80, 165, 0.95);
+            width: 100%;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.3);
+            text-align: left;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.9);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .weapon-desc {
+            margin-top: 40px;
+            max-width: 900px;
+            background: rgba(105, 80, 165, 0.95);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.3);
+            font-size: 1rem;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.9);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            text-align: left;
+        }
+
+ .weapon-container {
+    display: flex;
+    gap: 30px;
+    background: rgba(121, 95, 189, 0.4);
+    padding: 30px;
+    border-radius: 24px;
+    border: 1px solid rgba(255,255,255,0.15);
+    max-width: 900px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.weapon-card {
+    position: relative;
+    text-align: center;
+}
+
+.weapon-img {
+    width: 340px;
+    height: 210px;
+    object-fit: contain;
+    background: rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.weapon-name {
+    background: linear-gradient(90deg, transparent, rgba(236, 119, 187, 0.9), transparent);
+    padding: 8px 22px;
+    border-radius: 5px;
+    margin-top: -18px;
+    display: inline-block;
+    position: relative;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+    z-index: 2;
+}
+
+.stars {
+    color: #ffd700;
+    margin-top: 8px;
+    letter-spacing: 2px;
+    font-size: 1rem;
+}
+
+.pri-arm-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(157, 134, 225, 0.4);
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 900;
+    box-shadow: 0 0 15px rgba(255,255,255,0.6);
+    text-align: center;
+    line-height: 1.2;
+    z-index: 5;
+    transform: rotate(15deg);
+}
+
+        /* --- SECTION 3: STIGMATA (Image 3) --- */
+        .stigmata-title-extra {
+            font-size: 1.5rem;
+            margin-left: 10px;
+        }
+
+        .stigmata-container {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .stig-card {
+            width: 240px;
+            height: 380px;
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+            border: 4px solid white;
+        }
+        
+        .stig-img {
+            width: 100%;
+            height: 88%;
+            object-fit: cover;
+            background: #ddd;
+        }
+
+        .stig-name {
+            height: 12%;
+            background: rgba(106, 76, 172, 1);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+            100% { transform: translateY(0); }
+        }
+        .weapon-card:nth-child(1) { animation-delay: 0s; }
+        .weapon-card:nth-child(2) { animation-delay: 0.8s; }
+
+        .stig-card:nth-child(1) { animation-delay: 0s; }
+        .stig-card:nth-child(2) { animation-delay: 0.6s; }
+        .stig-card:nth-child(3) { animation-delay: 1.2s; }
+
+        .float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .center-portrait {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .info-pill {
+            animation: float 3.5s ease-in-out infinite;
+        }
+
+        .info-pill.p-left-1 { animation-delay: 0s; }
+        .info-pill.p-left-2 { animation-delay: 0.5s; }
+        .info-pill.p-right-1 { animation-delay: 1s; }
+        .info-pill.p-right-2 { animation-delay: 1.5s; }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: all 1s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
