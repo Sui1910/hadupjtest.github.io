@@ -330,3 +330,124 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+
+        /* ================== MOBILE FINAL ================== */
+    @media (max-width: 768px) {
+
+        /* ===== SECTION BASE ===== */
+        section {
+            padding: 50px 14px;
+            min-height: auto;
+        }
+
+        /* ===== HEADER ===== */
+        .header-title {
+            font-size: 1.1rem;
+            padding: 6px 14px;
+            margin-bottom: 18px;
+            border-width: 1.5px;
+            border-radius: 28px;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .deco-star {
+            font-size: 1rem;
+            margin-right: 6px;
+        }
+
+        .header-title .sub {
+            width: 100%;
+            font-size: 0.7rem;
+            margin: 4px 0 0;
+            opacity: 0.7;
+        }
+
+        /* ===== SECTION 1: BASIC INFO ===== */
+        .info-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            height: auto;
+            margin-top: 0;
+        }
+
+        .center-portrait {
+            grid-column: span 2;
+            width: 200px;
+            height: 200px;
+            margin-bottom: 10px;
+        }
+
+        .info-pill {
+            position: relative;
+            width: 100%;
+            height: auto;
+            padding: 10px 12px;
+            border-radius: 14px;
+            flex-direction: row;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .pill-label,
+        .pill-val {
+            writing-mode: horizontal-tb;
+            font-size: 0.75rem;
+            margin: 0;
+        }
+
+        .pill-icon-img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .p-left-1,
+        .p-left-2,
+        .p-right-1,
+        .p-right-2 {
+            top: auto;
+            left: auto;
+            right: auto;
+        }
+
+        .desc-box {
+            grid-column: span 2;
+            position: static;
+            margin-top: 16px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* ===== SECTION 3: STIGMATA ===== */
+        .stigmata-container {
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            gap: 8px;
+            padding: 0 6px;
+            overflow: hidden;
+        }
+
+        .stig-card {
+            width: calc((100vw - 40px) / 3);
+            max-width: 120px;
+            height: 210px;
+        }
+
+        .stig-img {
+            height: 85%;
+            object-fit: cover;
+        }
+
+        .stig-name {
+            height: 15%;
+            font-size: 0.65rem;
+            padding: 0 4px;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+    }
+
+
