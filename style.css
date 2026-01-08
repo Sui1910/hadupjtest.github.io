@@ -270,7 +270,7 @@
             overflow: hidden;
             position: relative;
             box-shadow: 0 15px 25px rgba(0,0,0,0.2);
-            border: 4px solid white;
+            border: 1px solid white;
         }
         
         .stig-img {
@@ -449,5 +449,6 @@
         }
 
     }
+
 
 
