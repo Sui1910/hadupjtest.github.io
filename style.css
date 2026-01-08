@@ -71,15 +71,6 @@
             text-transform: uppercase;
         }
 
-.sub {
-            font-size: 1.2rem;
-            color: rgba(255,255,255,0.7);
-            margin-left: 15px;
-            font-weight: 400;
-            font-family: 'Nunito', sans-serif;
-            text-transform: uppercase;
-}
-
         .deco-star {
             color: var(--accent-gold);
             margin-right: 15px;
@@ -458,6 +449,7 @@
         }
 
     }
+
 
 
 
